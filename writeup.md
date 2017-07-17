@@ -4,8 +4,6 @@ The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
-Below I have showed an example of the various processed images as they go through my pipeline.
-
 [//]: # (Image References)
 
 [image1]: ./processed_images/gray.png "Grayscale"
@@ -24,6 +22,15 @@ Below I have showed an example of the various processed images as they go throug
 My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I applied a Gaussian blur. After that I applied the Canny image transformation. Then I defined a region of interest. Finally I applied the hough lines which called my modified draw_lines() function to extend the lines.
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by first checking to see if the slope was positive or negative. If it was negative that meant that I had a right line, and if it was positive, it meant that I had a left line. From there I calculated the average slopes and intercepts. Using those along with the maximum and minimum values for x and y I was able to plot the lines.
+
+Below I have showed an example of the various processed images as they go through my pipeline.
+
+![alt text][image1]
+![alt text][image2]
+![alt text][image3]
+![alt text][image4]
+![alt text][image5]
+![alt text][image6]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
